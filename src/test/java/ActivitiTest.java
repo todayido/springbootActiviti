@@ -28,7 +28,6 @@ public class ActivitiTest {
     public void testCreateProcessEngineByCfgXml() {
         ProcessEngineConfiguration pec = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml");
         pec.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);// 创建数据库规则：如果表结构存在则更新
-        ProcessEngine processEngine = pec.buildProcessEngine();
     }
 
     /**
@@ -118,5 +117,12 @@ public class ActivitiTest {
         taskVariables.put("62506", "New Bee");
         taskVariables.put("resendRequest", "true");
         ActivitiUtils.competeTast(taskId, taskVariables);
+    }
+
+    /**
+     * 挂起流程
+     */
+    @Test
+    public void suspendProcess() {
     }
 }

@@ -6,7 +6,7 @@
         <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/activiti" />
         <property name="jdbcDriver" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUsername" value="root" />
-        <property name="jdbcPassword" value="root" />
+        <property name="jdbcPassword" value="eyecool" />
         <property name="databaseSchemaUpdate" value="true" />
     </bean>
 
