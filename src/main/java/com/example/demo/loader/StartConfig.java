@@ -22,6 +22,7 @@ public class StartConfig implements CommandLineRunner {
         while (true) {
             logger.debug("同步数据，每五分钟执行一次......");
             System.out.println(("同步数据，每五分钟执行一次......"));
+
             Thread.sleep(1000 * 60 * 5);
         }
     }
