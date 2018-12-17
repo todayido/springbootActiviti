@@ -119,14 +119,4 @@ public class ActivitiTest {
         taskVariables.put("resendRequest", "true");
         ActivitiUtils.competeTast(taskId, taskVariables);
     }
-
-    @Test
-    public void testaas(){
-        TaskService taskService = processEngine.getTaskService();
-        for (int i = 0; i < taskService.createTaskQuery().list().size(); i++) {
-            System.out.println("123");
-            Task task = taskService.createTaskQuery().list().get(i);
-            System.out.println(task.getAssignee() + task.getCategory() + task.getName() + task.getOwner() + task.getId());
-        }
-    }
 }
