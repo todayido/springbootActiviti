@@ -1,2 +1,3 @@
 # springbootActiviti
-springboot mybatis activiti 集成
+springboot mybatis activiti 集成，下载之后直接运行pom.xml文件即可。
+ActivitiTest包含了几个测试用例来更好的理解如何使用Activiti
