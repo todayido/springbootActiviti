@@ -20,29 +20,31 @@ public class ActivitiUtils {
 
     /**
      * 发布流程
-     * @param pName ：流程名称
+     *
+     * @param pName    ：流程名称
      * @param fileName ：resource下流程文件名[xxx.bpmn]
      * @return
      */
-    public static void deployProcess(String pName, String fileName){
+    public static void deployProcess(String pName, String fileName) {
         RepositoryService repositoryService = processEngine.getRepositoryService();
         DeploymentBuilder builder = repositoryService.createDeployment();
         builder.name(pName);
         builder.addClasspathResource(fileName);
         Deployment deployment = builder.deploy();
-        log.debug("Process ID: {}, Process name: {}", deployment.getId(),deployment.getName());
+        log.debug("Process ID: {}, Process name: {}", deployment.getId(), deployment.getName());
     }
 
     /**
      * 启动一个流程实例
-     * @param pKey : 流程实例 KEY_
+     *
+     * @param pKey      : 流程实例 KEY_
      * @param paramsMap : 参数
-     * As shown as fallow
-     * "employeeName", "Eric Lee"
-     * "numberOfDays", 20
-     * "vacationMotivation", "The world is so big, I want to see it."
+     *                  As shown as fallow
+     *                  "employeeName", "Eric Lee"
+     *                  "numberOfDays", 20
+     *                  "vacationMotivation", "The world is so big, I want to see it."
      */
-    public static RuntimeService startProccess(String pKey, Map paramsMap){
+    public static RuntimeService startProccess(String pKey, Map paramsMap) {
         RuntimeService runtimeService = processEngine.getRuntimeService();
         runtimeService.startProcessInstanceByKey(pKey, paramsMap);
         return runtimeService;
@@ -51,16 +53,16 @@ public class ActivitiUtils {
 
     /**
      * Fetch all tasks for the user group specified
+     *
      * @param userId
      * @return
      */
-    public static List<Task> fetchAllTasks(String userId){
+    public static List<Task> fetchAllTasks(String userId) {
         TaskService taskService = processEngine.getTaskService();
         return taskService.createTaskQuery().taskAssignee(userId).list();
     }
 
     /**
-     *
      * @param taskId
      * @param variables
      */
@@ -71,6 +73,7 @@ public class ActivitiUtils {
 
     /**
      * 获取一个结束的流程的历史数据
+     *
      * @param pId ： 流程实例ID
      * @return
      */

@@ -92,9 +92,7 @@ public class ActivitiTest {
     }
 
     /**
-     *
-     *  查询历史任务
-     *
+     * 查询历史任务
      */
     @Test
     public void queryTask() {

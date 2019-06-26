@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 @Mapper
 @Repository
-public interface UserMapper{
+public interface UserMapper {
 
     int deleteByPrimaryKey(Integer id);
 

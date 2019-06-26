@@ -17,7 +17,7 @@ public class UserController {
 
     @ResponseBody
     @RequestMapping("/info/{id}")
-    public String getUserName(@PathVariable String id){
+    public String getUserName(@PathVariable String id) {
         return userService.getUsername(id).getUsername();
     }
 }

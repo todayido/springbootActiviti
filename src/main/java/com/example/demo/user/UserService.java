@@ -13,7 +13,7 @@ public class UserService {
     @Autowired
     UserMapper userMapper;
 
-    public User getUsername(String id){
+    public User getUsername(String id) {
         return userMapper.selectByPrimaryKey(Integer.parseInt(id));
     }
 
