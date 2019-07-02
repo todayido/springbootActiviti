@@ -24,6 +24,7 @@ public class LamdaTest {
         MyThread myThread = new MyThread();
         myThread.start();
 
+
     }
 
 
