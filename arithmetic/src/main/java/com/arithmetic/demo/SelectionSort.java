@@ -14,7 +14,7 @@ public class SelectionSort {
 
         for (int i = 0; i < arr.length-1; i++) {
             int minPos = i;
-            for (int j = i+1; j < arr.length; j++) { // 从第一个和第二个开始比较，如果小余，就赋值给minPos，然后继续。循环完之后交换。
+            for (int j = i + 1; j < arr.length ; j++) { // 从第一个和第二个开始比较，如果小余，就赋值给minPos，然后继续。循环完之后交换。从小到大排序
                 minPos = arr[j] < arr[minPos] ? j : minPos;
             }
 
