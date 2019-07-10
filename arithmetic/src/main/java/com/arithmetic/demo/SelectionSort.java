@@ -7,6 +7,7 @@ public class SelectionSort {
     /**
      * @Description: 快速排序
      * 时间复杂度O(n²)【两个for循环】,空间复杂度O(1)【temp临时变量一个】
+     * 不稳定
      */
     public static void main(String[] args) {
         int[] arr = {5, 3, 6, 1, 7, 4, 2};
@@ -21,7 +22,6 @@ public class SelectionSort {
             arr[i] = arr[minPos];
             arr[minPos] = temp;
 
-            System.out.println("===========");
             System.out.println(Arrays.toString(arr));
         }
     }

@@ -1,40 +1,30 @@
 package com.arithmetic.demo;
 
 public class User {
-    public Integer uid;
-    public String uname;
-    public String upassword;
+    public Integer id;
+    public String username;
 
-    public Integer getUid() {
-        return uid;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUid(Integer uid) {
-        this.uid = uid;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUname() {
-        return uname;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
-    }
-
-    public String getUpassword() {
-        return upassword;
-    }
-
-    public void setUpassword(String upassword) {
-        this.upassword = upassword;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "uid=" + uid +
-                ", uname='" + uname + '\'' +
-                ", upassword='" + upassword + '\'' +
+                "id=" + id +
+                ", username='" + username + '\'' +
                 '}';
     }
 }

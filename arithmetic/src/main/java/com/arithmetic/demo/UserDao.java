@@ -1,10 +1,12 @@
 package com.arithmetic.demo;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
+@Mapper
 public interface UserDao {
 
     @Select("select * from t_user")

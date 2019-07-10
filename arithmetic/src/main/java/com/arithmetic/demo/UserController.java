@@ -15,7 +15,7 @@ public class UserController {
     private HttpServletRequest request;
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @RequestMapping("/api/login")
     public String Login(User user) {
