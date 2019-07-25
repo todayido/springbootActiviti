@@ -1,4 +1,4 @@
-package java.singleton;
+package singleton;
 
 /**
  * @Description: 饿汉式单例设计

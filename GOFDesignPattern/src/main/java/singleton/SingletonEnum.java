@@ -1,4 +1,4 @@
-package java.singleton;
+package singleton;
 
 /**
  * @Description: 枚举类实现单例

@@ -1,4 +1,4 @@
-package java.singleton;
+package singleton;
 
 /**
  * @Description: 静态内部类单例实现，延时加载
