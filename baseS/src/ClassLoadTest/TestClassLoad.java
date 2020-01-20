@@ -4,6 +4,12 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+
+interface IMessage {
+    public String send();
+}
+
+
 class Message implements IMessage {
 
     @Override
@@ -11,10 +17,6 @@ class Message implements IMessage {
         System.out.println("执行发送...");
         return "返回数据...";
     }
-}
-
-interface IMessage {
-    public String send();
 }
 
 class MyProxy implements InvocationHandler {
@@ -43,5 +45,8 @@ public class TestClassLoad {
 
         IMessage message = (IMessage) new MyProxy().bind(new Message());// 必须使用接口转型
         message.send();
+
+        System.out.println(System.getProperty("sun.boot.class.path"));
+        System.out.println(System.getProperty("java.ext.dirs"));
     }
 }

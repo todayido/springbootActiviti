@@ -6,7 +6,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Method;
 
 @FunctionalInterface
-@Deprecated(since = "1.0")
 interface IMessage {
     public void send(String msg);
 }

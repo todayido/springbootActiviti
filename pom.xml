@@ -6,6 +6,7 @@
     <modules>
         <module>zk</module>
         <module>GOFDesignPattern</module>
+        <module>test4rpc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
